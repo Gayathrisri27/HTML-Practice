@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration Successful</title>
+    <style>
+        /* Base reset and styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1d4ed8, #9333ea);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #4f46e5;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .nav-links a:nth-child(2) {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .admin-confirmation {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .admin-confirmation h2 {
+            font-size: 28px;
+            color: #10b981;
+            margin-bottom: 20px;
+        }
+
+        .admin-confirmation p {
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+
+        .admin-features {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .admin-features h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .admin-features ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #718096;
+        }
+
+        .admin-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #4f46e5;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .admin-btn:hover {
+            background: #3730a3;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #4f46e5;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #a5b4fc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">Friendship Zone</div>
+                <div class="nav-links">
+                    <a href="Homepage.html">Home</a>
+                    <a href="#login">Login</a>
+                    <a href="FriendList.html">Friends</a>
+                    <a href="RegistrationForm.html">Register</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Admin Confirmation Section -->
+        <div class="admin-confirmation">
+            <h2>Admin Registration Successful!</h2>
+            <p>Welcome to the admin panel. Your account is now active, and you have access to exclusive admin features.</p>
+
+            <div class="admin-features">
+                <h3>Admin Features:</h3>
+                <ul>
+                    <li>Manage and oversee user accounts</li>
+                    <li>Monitor real-time activity across the platform</li>
+                    <li>Access advanced analytics and data insights</li>
+                    <li>Customize settings to optimize platform experience</li>
+                </ul>
+            </div>
+
+            <a href="AdminDashboard.html" class="admin-btn">Go to Admin Dashboard</a>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            © 2024 Friendship Zone | <a href="PrivacyPolicy.html">Privacy Policy</a>
+        </footer>
+    </div>
+</body>
+</html>
