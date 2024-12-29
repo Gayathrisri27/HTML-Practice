@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMob-Mechanic</title>
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: #1a237e;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        section {
+            display: none;
+            padding: 50px 0;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .hero {
+            background: url('/api/placeholder/1200/400') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            background-blend-mode: overlay;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #f44336;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .features, .services-grid, .booking-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .footer {
+            background: #1a237e;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        /* Additional section-specific styles omitted for brevity */
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">AutoMob-Mechanic</div>
+                <div class="nav-links">
+                    <a onclick="showSection('home')">Home</a>
+                    <a onclick="showSection('services')">Services</a>
+                    <a onclick="showSection('booking')">Book Service</a>
+                    <a onclick="showSection('appointment')">Schedule Appointment</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <div class="hero">
+                <h1>Expert Car Care Services</h1>
+                <p>Professional auto repair and maintenance services you can trust</p>
+                <a class="cta-button" onclick="showSection('booking')">Book Now</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="feature-card">
+                    <h3>Preventive Maintenance</h3>
+                    <p>Regular maintenance to keep your vehicle in top condition</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Body Repair</h3>
+                    <p>Expert body repair and painting services</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Car Care</h3>
+                    <p>Complete car care and detailing services</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking">
+            <h2>Book a Service</h2>
+            <form class="booking-form" onsubmit="showSection('success'); return false;">
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" required>
+                        <option value="">Choose a service...</option>
+                        <option value="preventive">Preventive Maintenance</option>
+                        <option value="body">Body Repair</option>
+                        <option value="care">Car Care</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </section>
+
+        <!-- Success Section -->
+        <section id="success">
+            <h2>Booking Confirmed!</h2>
+            <p>Thank you for booking with AutoMob-Mechanic. We look forward to serving you.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 AutoMob-Mechanic. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
